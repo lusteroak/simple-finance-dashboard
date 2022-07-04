@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const LogoText = styled.h4`
+const LogoText = styled.h1`
     font-family: 'Anton', sans-serif;
     font-size: 20px;
 `

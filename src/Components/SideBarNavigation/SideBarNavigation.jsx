@@ -5,6 +5,7 @@ import { FaHome, FaTrophy,
     FaPoll, FaTools } from "react-icons/fa"
 
 import SideBarNavigationLogo from "./SideBarNavigationLogo";
+import SideBarNavigationUser from "./SideBarNavigationUser";
 
 const Text = styled.div`
   font-size: 16px;
@@ -84,7 +85,9 @@ function SideBarNavigation() {
             <Icon>{icon}</Icon>
             <Text>{navigate}</Text>
         </IconTitleLayout>
+      
       ))}
+      <SideBarNavigationUser name="Bob" />
     </Layout>
   );
 }
