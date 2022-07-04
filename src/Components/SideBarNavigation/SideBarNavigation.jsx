@@ -4,20 +4,31 @@ import { FaHome, FaTrophy,
     FaUniversity, FaUserAlt,
     FaPoll, FaTools } from "react-icons/fa"
 
+import SideBarNavigationLogo from "./SideBarNavigationLogo";
+
 const Text = styled.div`
   font-size: 16px;
   color: #000000;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+`;
+
+const Icon = styled.div`
+  font-size: 22px;
+  color: #000000;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
 `;
 
 const Layout = styled.div`
-  width: 40vh;
+  width: 200px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  border-right: solid 2px gray;
+  border-right: solid 1px #c8c9c3;
 `;
 
 const IconTitleLayout = styled.div`
@@ -67,9 +78,10 @@ const navigation_elements = [
 function SideBarNavigation() {
   return (
     <Layout>
+      <SideBarNavigationLogo />
       {navigation_elements.map(({ navigate, icon }) => (
         <IconTitleLayout>
-            <Text>{icon}</Text>
+            <Icon>{icon}</Icon>
             <Text>{navigate}</Text>
         </IconTitleLayout>
       ))}
