@@ -1,10 +1,13 @@
 import SideBarNavigation from "./Components/SideBarNavigation/SideBarNavigation";
+import Dashboard from './Components/Dashboard/Dashboard'
+import MainLayout from "./Layout/MainLayout";
 
 function App() {
   return (
-    <div>
+    <MainLayout>
       <SideBarNavigation />
-    </div>
+      <Dashboard />
+    </MainLayout>
   );
 }
 

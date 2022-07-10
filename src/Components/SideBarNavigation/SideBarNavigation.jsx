@@ -1,11 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { FaHome, FaTrophy, 
-    FaUniversity, FaUserAlt,
-    FaPoll, FaTools } from "react-icons/fa"
+import React from 'react';
+import styled from 'styled-components';
 
-import SideBarNavigationLogo from "./SideBarNavigationLogo";
-import SideBarNavigationUser from "./SideBarNavigationUser";
+import SideBarNavigationLogo from './SideBarNavigationLogo';
+import SideBarNavigationUser from './SideBarNavigationUser';
+import { SideBarElements } from './SideBarElements';
 
 const Text = styled.div`
   font-size: 16px;
@@ -33,61 +31,25 @@ const Layout = styled.div`
 `;
 
 const IconTitleLayout = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
-    gap: 2rem;
-    width: 10rem;
-    position: relative;
-    
-
-`
-
-const navigation_elements = [
-  {
-    id: 1,
-    navigate: "Home",
-    icon: <FaHome />,
-  },
-  {
-    id: 2,
-    navigate: "Projects",
-    icon: <FaTrophy />,
-  },
-  {
-    id: 3,
-    navigate: "Billings",
-    icon: <FaUniversity />,
-  },
-  {
-    id: 4,
-    navigate: "Team Members",
-    icon: <FaUserAlt />,
-  },
-  {
-    id: 5,
-    navigate: "Stats",
-    icon: <FaPoll />,
-  },
-  {
-    id: 6,
-    navigate: "Settings",
-    icon: <FaTools />,
-  },
-];
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  gap: 2rem;
+  width: 10rem;
+  position: relative;
+`;
 
 function SideBarNavigation() {
   return (
     <Layout>
       <SideBarNavigationLogo />
-      {navigation_elements.map(({ navigate, icon }) => (
+      {SideBarElements.map(({ navigate, icon }) => (
         <IconTitleLayout>
-            <Icon>{icon}</Icon>
-            <Text>{navigate}</Text>
+          <Icon>{icon}</Icon>
+          <Text>{navigate}</Text>
         </IconTitleLayout>
-      
       ))}
-      <SideBarNavigationUser name="Bob" />
+      <SideBarNavigationUser name='Bob' />
     </Layout>
   );
 }
