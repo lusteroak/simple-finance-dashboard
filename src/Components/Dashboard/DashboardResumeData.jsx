@@ -1,23 +1,25 @@
+import { FaRegEye, FaRegHandPointUp, FaBook } from 'react-icons/fa';
+
 export const DashboardResumeData = [
   {
     id: 1,
-    icon: <FaHome />,
+    icon: <FaRegEye />,
     text_detail: 'Views',
     number: 250,
-    text_frequency: 'Per Day',
+    text_frequency: '\nPer Day',
   },
   {
     id: 2,
-    icon: <FaHome />,
+    icon: <FaRegHandPointUp />,
     text_detail: 'Visits',
     number: 1300,
-    text_frequency: 'Per Minutes',
+    text_frequency: '\nPer Minutes',
   },
   {
     id: 3,
-    icon: <FaHome />,
+    icon: <FaBook />,
     text_detail: 'Orders',
     number: 250,
-    text_frequency: 'Per Day',
+    text_frequency: '\nPer Day',
   },
 ];
